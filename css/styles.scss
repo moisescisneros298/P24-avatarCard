@@ -98,5 +98,26 @@ body {
                 background: rgba(242, 7, 132);
             }
         }
+        .info {
+            color: #fff;
+            p {
+                margin: 15px 0 10px;
+            }
+        }
+    }
+    &:hover {
+        .poster {
+            &::before {
+                bottom: 0;
+            }
+            img {
+                filter: blur(5px);
+                transform: translateY(-60px);
+            }
+            box-shadow: 0 0 50pc #273234;
+            .details {
+                bottom: 0;
+            }
+        }
     }
 }

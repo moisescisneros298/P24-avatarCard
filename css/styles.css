@@ -100,4 +100,23 @@ body {
 }
 .card .details .tags .mistery {
   background: rgb(242, 7, 132);
+}
+.card .details .info {
+  color: #fff;
+}
+.card .details .info p {
+  margin: 15px 0 10px;
+}
+.card:hover .poster {
+  box-shadow: 0 0 50pc #273234;
+}
+.card:hover .poster::before {
+  bottom: 0;
+}
+.card:hover .poster img {
+  filter: blur(5px);
+  transform: translateY(-60px);
+}
+.card:hover .poster .details {
+  bottom: 0;
 }/*# sourceMappingURL=styles.css.map */
