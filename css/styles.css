@@ -3,18 +3,30 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  background: url(../img/f3.jpg) no-repeat center fixed;
-  overflow: hidden;
 }
 
 body {
+  background: url(../img/f3.jpg) no-repeat center fixed;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+body::before {
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(32, 8, 60) 20%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
 
 .card {
+  z-index: 100;
   width: 300px;
   height: 460px;
   position: absolute;
@@ -106,6 +118,25 @@ body {
 }
 .card .details .info p {
   margin: 15px 0 10px;
+}
+.card .details .cast {
+  position: relative;
+}
+.card .details .cast h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.card .details .cast ul {
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+}
+.card .details .cast ul li {
+  list-style: none;
+  width: 35px;
+  height: 35px;
 }
 .card:hover .poster {
   box-shadow: 0 0 50pc #273234;
