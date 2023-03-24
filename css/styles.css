@@ -11,7 +11,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 body::before {
   content: "";
@@ -26,18 +25,18 @@ body::before {
 }
 
 .card {
-  z-index: 100;
-  width: 300px;
-  height: 460px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 300px;
+  height: 460px;
   background: #000;
   overflow: hidden;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   transition: all 0.3s;
+  z-index: 100;
 }
 .card .poster {
   position: relative;
@@ -52,6 +51,7 @@ body::before {
   height: 100%;
   background: linear-gradient(0deg, rgb(0, 0, 0) 70%, transparent);
   transition: 0.5s;
+  z-index: 1;
 }
 .card .poster img {
   -o-object-fit: cover;
@@ -66,6 +66,7 @@ body::before {
   height: 85%;
   bottom: -200px;
   left: 0;
+  box-sizing: border-box;
   transition: 0.5s;
   z-index: 2;
 }
@@ -94,7 +95,7 @@ body::before {
 }
 .card .details .rating span {
   color: #fff;
-  padding: 0 50px;
+  padding: 0 5px;
 }
 .card .details .tags {
   position: relative;
@@ -137,8 +138,16 @@ body::before {
   list-style: none;
   width: 35px;
   height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 6px;
+  border: 2px solid #fff;
 }
-.card:hover .poster {
+.card .details .cast ul li img {
+  width: 100%;
+}
+.card:hover {
   box-shadow: 0 0 50pc #273234;
 }
 .card:hover .poster::before {
@@ -148,6 +157,6 @@ body::before {
   filter: blur(5px);
   transform: translateY(-60px);
 }
-.card:hover .poster .details {
+.card:hover .details {
   bottom: 0;
 }/*# sourceMappingURL=styles.css.map */
