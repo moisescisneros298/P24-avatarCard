@@ -81,5 +81,22 @@ body {
 
             }
         }
+        .tags {
+            position: relative;
+            margin-top: 5px;
+            span {
+                padding: 2px 5px;
+                margin-right: 2px;
+                color: #fff;
+                display: inline-block;
+                border-radius: 4px;
+            }
+            .fantasy {
+                background: rgba(114, 49, 243);
+            }
+            .mistery {
+                background: rgba(242, 7, 132);
+            }
+        }
     }
 }
